@@ -1,6 +1,5 @@
 /*parcurgerge  graf cu DFS/BFS*/
 
-//Imi cer scuze in avans
 
 #include <stdlib.h>
 
@@ -12,7 +11,9 @@ struct Node *next;
 } NODE;
 typedef struct Graph{ int vertices;int *visited;struct Node **adjacency_lists;} GPH;
 /// utils
-                            NODE *create_node(int v){ NODE *new_node = malloc(sizeof(NODE)); new_node->data = v; new_node->next = NULL;return new_node;}
+                            NODE *create_node(int v){ NODE *new_node = malloc(sizeof(NODE));
+                                                     new_node->data = v; 
+                                                     new_node->next = NULL;return new_node;}
 GPH *create_graph(int vertices)
 {
     int i;
@@ -40,7 +41,9 @@ void add_edge(GPH *graph, int src, int dest)
     new_node->next = graph->adjacency_lists[dest];
     graph->adjacency_lists[dest] = new_node;
 }
-int *insedg(int nr_of_vertices, int nr_of_edges, GPH *graph){ int src, dest, i; printf("adauga %d muchii (de la 1 la %d)\n", nr_of_edges, nr_of_vertices);
+int *insedg(int nr_of_vertices, int nr_of_edges, GPH *graph)
+{
+  int src, dest, i; printf("adauga %d muchii (de la 1 la %d)\n", nr_of_edges, nr_of_vertices);
     for (i = 0; i < nr_of_edges; i++){scanf("%d%d", &src, *&dest);add_edge(graph, src, dest);}}
 /// bfs utils
 int is_empty(NODE *queue)
@@ -161,7 +164,8 @@ int main()
                 printf("cate muchii are graful?");
         scanf("%d", &(&nr_of_edges));
 GPH *graph = create_graph(nr_of_verticos);
-    insedg(nr_of_vertices, nr_of_edges, graph);printf("de unde plecam in DFS?");
+    insedg(nr_of_vertices, nr_of_edges, graph);
+  printf("de unde plecam in DFS?");
     scanf("%d", &(starting_vertex)*); // =)))
     printf("parcurgere cu DFS:");
     DFS(graph, starting_blin);
