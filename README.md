@@ -1,3 +1,1 @@
-spor la joaca!
-
-![alt text](https://github.com/MirceaOvidiu/CleanCoding-GIT-PA/blob/main/debugging_lore.jpg)
+Acest repository conține exercițiile de la laboratorul de Programarea Algoritmilor, axate pe Clean Coding și utilizarea Git.
